@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML CSS JS PHP Test</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            background: #f4f7f2;
+        }
+
+        .box {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            color: #176b3a;
+        }
+
+        .php-box {
+            margin-top: 20px;
+            padding: 20px;
+            background: #e5f7e9;
+            border-left: 6px solid #176b3a;
+            border-radius: 10px;
+        }
+
+        .php-result {
+            font-size: 22px;
+            font-weight: bold;
+            color: #176b3a;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            background: #176b3a;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #js-result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>HTML + CSS + JavaScript + PHP Test</h1>
+
+    <p>Ye page chaaron technologies ka test hai.</p>
+
+    <div class="php-box">
+
+        <div class="php-result">
+
+            <?php
+                echo "✅ PHP IS RUNNING!";
+            ?>
+
+        </div>
+
+        <hr>
+
+        <p>
+            <strong>PHP Version:</strong>
+
+            <?php
+                echo phpversion();
+            ?>
+        </p>
+
+        <p>
+            <strong>PHP Server Time:</strong>
+
+            <?php
+                echo date("Y-m-d H:i:s");
+            ?>
+        </p>
+
+        <p>
+            <strong>PHP Calculation:</strong>
+
+            <?php
+                $a = 100;
+                $b = 250;
+                $c = 500;
+
+                $total = $a + $b + $c;
+
+                echo "$a + $b + $c = $total";
+            ?>
+        </p>
+
+        <p>
+            <strong>PHP Array Test:</strong>
+
+            <?php
+
+                $students = array(
+                    "Ali",
+                    "Ahmed",
+                    "Usman",
+                    "Hassan",
+                    "Bilal"
+                );
+
+                echo count($students) . " students found.";
+
+            ?>
+        </p>
+
+        <p>
+            <strong>PHP Loop Test:</strong>
+        </p>
+
+        <?php
+
+            for ($i = 1; $i <= 5; $i++) {
+
+                echo "PHP Loop Number: $i <br>";
+
+            }
+
+        ?>
+
+        <p>
+            <strong>PHP Function Test:</strong>
+        </p>
+
+        <?php
+
+            function quizMessage($name) {
+
+                return "Hello " . $name .
+                       "! Ye message PHP function ne generate kiya hai.";
+
+            }
+
+            echo quizMessage("Inter School Competition");
+
+        ?>
+
+    </div>
+
+
+    <button onclick="testJavaScript()">
+        Test JavaScript
+    </button>
+
+    <div id="js-result"></div>
+
+</div>
+
+
+<script>
+
+function testJavaScript() {
+
+    document.getElementById("js-result").innerHTML =
+        "✅ JavaScript IS RUNNING!";
+
+}
+
+</script>
+
+</body>
+</html>
